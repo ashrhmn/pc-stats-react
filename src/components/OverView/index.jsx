@@ -1,6 +1,7 @@
 import React from 'react'
 import CpuCard from './CpuCard'
 import GraphicsCard from './GraphicsCard'
+import MemoryCard from './MemoryCard'
 import SystemCard from './SystemCard'
 
 function OverView() {
@@ -10,6 +11,7 @@ function OverView() {
             <SystemCard/>
             <CpuCard/>
             <GraphicsCard/>
+            <MemoryCard/>
         </div>
     )
 }

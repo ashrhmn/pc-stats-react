@@ -10,6 +10,7 @@ function App() {
   useQuery("bios", () => service.get("bios").then((res) => res.data));
   useQuery("cpu", () => service.get("cpu").then((res) => res.data));
   useQuery("graphics", () => service.get("graphics").then((res) => res.data));
+  useQuery("mem", () => service.get("mem").then((res) => res.data));
 
 
   return (

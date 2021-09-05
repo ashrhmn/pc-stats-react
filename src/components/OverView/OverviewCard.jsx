@@ -3,7 +3,7 @@ import React from "react";
 function OverviewCard({ data, title }) {
   return (
     <div
-      style={{ background: "#5E609C", minHeight: "180px" }}
+      style={{ background: "#5E609C", minHeight: "200px" }}
       className="p-4 rounded-xl text-white w-80 m-2"
     >
       <div className="text-center text-xl font-bold mb-2">{title}</div>

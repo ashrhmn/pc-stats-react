@@ -16,7 +16,7 @@ function GraphicsCard() {
         },
         {
           key: "VRAM",
-          value: data?.vram
+          value: data?.vram+' MB'
         },
       ];
     return (
