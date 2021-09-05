@@ -1,54 +1,22 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from "react";
+
+import service from "./service";
+import OverView from "./components/OverView/";
+import { useQuery } from "react-query";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  useQuery("baseboard", () => service.get("baseboard").then((res) => res.data));
+  useQuery("bios", () => service.get("bios").then((res) => res.data));
+  useQuery("cpu", () => service.get("cpu").then((res) => res.data));
+  useQuery("graphics", () => service.get("graphics").then((res) => res.data));
+
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + ReactJS!</p>
-        <p>
-          <button className="bg-blue-500 text-white hover:bg-blue-700 rounded-md p-1" type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-          <br/>
-          <a
-            className="App-link"
-            href="http://ashik.amarsite.net"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ashik Rahman
-          </a>
-        </p>
-      </header>
+    <div className="bg-blue-300 mx-auto max-w-5xl">
+      <OverView />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
