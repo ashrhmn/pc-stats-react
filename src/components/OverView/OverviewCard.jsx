@@ -7,12 +7,13 @@ function OverviewCard({ data, title }) {
       className="p-4 rounded-xl text-white w-80 m-2"
     >
       <div className="text-center text-xl font-bold mb-2">{title}</div>
-      <table className="table-auto w-full">
+      <table className="w-full">
         <tbody>
           {data?.map((row, index) => (
             <tr key={index}>
-              <td className="text-right pr-4">{row.key} :</td>
-              <td>{row.value}</td>
+              <td className="pr-1">{row.key}</td>
+              <td>:</td>
+              <td className="pl-3">{row.value}</td>
             </tr>
           ))}
         </tbody>

@@ -3,6 +3,7 @@ import CpuCard from './CpuCard'
 import GraphicsCard from './GraphicsCard'
 import MemoryCard from './MemoryCard'
 import SystemCard from './SystemCard'
+import TempCard from './TempCard.jsx'
 
 function OverView() {
     return (
@@ -10,8 +11,9 @@ function OverView() {
         <div className="flex flex-row flex-wrap justify-around">
             <SystemCard/>
             <CpuCard/>
-            <GraphicsCard/>
             <MemoryCard/>
+            <TempCard/>
+            <GraphicsCard/>
         </div>
     )
 }
