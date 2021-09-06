@@ -4,27 +4,6 @@ import OverviewCard from './OverviewCard';
 
 function CpuCard() {
     const cpu = useQueryClient().getQueryData(["cpu"]);
-
-    // if (cpuData) {
-    //   systemData = [
-    //     {
-    //       key: "Model",
-    //       value: baseboardData.model,
-    //     },
-    //     {
-    //       key: "Manufacturer",
-    //       value: baseboardData.manufacturer,
-    //     },
-    //     {
-    //       key: "Serial",
-    //       value: baseboardData.serial,
-    //     },
-    //     {
-    //       key: "BIOS Version",
-    //       value: biosData?.version
-    //     },
-    //   ];
-    // }
     const cpuData = [
         {
           key: "Model",
