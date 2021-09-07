@@ -22,20 +22,10 @@ function App() {
   const frequentUpdate = () => {
     queryClient.invalidateQueries("temp");
     queryClient.invalidateQueries("mem");
-
-    // if (tempHistory.length == 10) {
-    //   tempHistory.shift();
-    // }
-    // tempHistory.push({
-    //   temp: queryClient.getQueryData("temp"),
-    //   time: new Date().getMinutes() + ":" + new Date().getSeconds(),
-    // });
-
-    // console.log(tempHistory);
   };
 
   useEffect(() => {
-    setInterval(frequentUpdate, 2000);
+    setInterval(frequentUpdate, 5000);
   }, []);
 
   return (
